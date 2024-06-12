@@ -91,7 +91,7 @@ Ik heb voor het project *Docker en Kubernetes* gekozen. Vooral omdat ik al wat e
 <div class="page-break" style="page-break-before: always;"></div>
 
 ## Netwerkschema
-![[Netwerkschema_Project_Jan_v4_transparant.png|475]]
+![Netwerkschema_Project_Jan_v4_transparant.png](images/Netwerkschema_Project_Jan_v4_transparant.png)
 
 <div class="page-break" style="page-break-before: always;"></div>
 
