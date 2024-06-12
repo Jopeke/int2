@@ -104,19 +104,19 @@ https://dl.ubnt.com/guides/edgemax/EdgeRouter_ER-X_QSG.pdf
 We starten met de router te resetten door de reset knop 10 seconden lang ingedrukt te houden tot de `eth4` LED begint te knipperen. We verbinden dan onze ethernet kabel met de `eth0/PoE In` poort op de router. Volgens de handleiding bevind de router zich standaard in het `192.168.1.x` subnet. We zullen dus onze computer een statisch IP-adres instellen in dit subnet.
 
 ![1 - Router - Static IP Windows.png]
-![1 - Router - Static IP Windows.png](images/1 - Router - Static IP Windows.png)
+![1 - Router - Static IP Windows.png](images/router/1 - Router - Static IP Windows.png)
 <div class="page-break" style="page-break-before: always;"></div>
 
 ### 1.3 Setup Wizard
 #### 1.3.1 WAN configuratie
 We stellen hier het statisch IP-adres in dat we gekregen hebben aan het begin van de module. In dit geval is dit: `192.168.25.168/24`
 
-![2 - Router - WAN Config.png](images/2 - Router - WAN Config.png)
+![2 - Router - WAN Config.png](images/router/2 - Router - WAN Config.png)
 
 #### 1.3.2 LAN configuratie
 Vervolgens stellen we het subnet in dat we gekregen hebben in de opgave: `192.168.10.0/24` , we zetten de DHCP server ook aan.
 
-![3 - Router - LAN Config.png](images/3 - Router - LAN Config.png)
+![3 - Router - LAN Config.png](images/router/3 - Router - LAN Config.png)
 <div class="page-break" style="page-break-before: always;"></div>
 
 #### 1.3.3 Instellen DHCP windows
