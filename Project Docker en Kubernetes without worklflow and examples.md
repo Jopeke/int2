@@ -15,72 +15,72 @@ tags:
   - git
 ---
 
-![[voorblad v4.png]]
+![voorblad v4.png]
 
 <div class="page-break" style="page-break-before: always;"></div>
 
-- [[#Inleiding|Inleiding]]
-- [[#Netwerkschema|Netwerkschema]]
-- [[#1. Router|1. Router]]
-	- [[#1. Router#1.1 Opzoeken handleiding|1.1 Opzoeken handleiding]]
-	- [[#1. Router#1.2 Instellen statisch IP|1.2 Instellen statisch IP]]
-	- [[#1. Router#1.3 Setup Wizard|1.3 Setup Wizard]]
-		- [[#1.3 Setup Wizard#1.3.1 WAN configuratie|1.3.1 WAN configuratie]]
-		- [[#1.3 Setup Wizard#1.3.2 LAN configuratie|1.3.2 LAN configuratie]]
-		- [[#1.3 Setup Wizard#1.3.3 Instellen DHCP windows|1.3.3 Instellen DHCP windows]]
-	- [[#1. Router#1.4 Instellen Wireguard VPN|1.4 Instellen Wireguard VPN]]
-		- [[#1.4 Instellen Wireguard VPN#1.4.1 Installeren Wireguard|1.4.1 Installeren Wireguard]]
-		- [[#1.4 Instellen Wireguard VPN#1.4.2 Aanmaken Wireguard keys|1.4.2 Aanmaken Wireguard keys]]
-		- [[#1.4 Instellen Wireguard VPN#1.4.3 Aanmaken Wireguard interface|1.4.3 Aanmaken Wireguard interface]]
-		- [[#1.4 Instellen Wireguard VPN#1.4.3 Instellen client|1.4.3 Instellen client]]
-- [[#2. ESXi|2. ESXi]]
-	- [[#2. ESXi#2.1 ESXi installeren|2.1 ESXi installeren]]
-	- [[#2. ESXi#2.2 ESXi instellingen|2.2 ESXi instellingen]]
-	- [[#2. ESXi#2.3 VMs aanmaken|2.3 VMs aanmaken]]
-	- [[#2. ESXi#2.4 VMs configureren|2.4 VMs configureren]]
-- [[#3. Gemeenschappelijke configuratie|3. Gemeenschappelijke configuratie]]
-	- [[#3. Gemeenschappelijke configuratie#3.1 Docker|3.1 Docker]]
-		- [[#3.1 Docker#3.1.1 Wat is docker?|3.1.1 Wat is docker?]]
-		- [[#3.1 Docker#3.1.2 Docker installeren|3.1.2 Docker installeren]]
-	- [[#3. Gemeenschappelijke configuratie#3.2 Containerd|3.2 Containerd]]
-		- [[#3.2 Containerd#3.2.1 Wat is containerd?|3.2.1 Wat is containerd?]]
-		- [[#3.2 Containerd#3.2.2 Waarom containerd over Docker als CRI|3.2.2 Waarom containerd over Docker als CRI]]
-		- [[#3.2 Containerd#3.2.3 Containerd instellen|3.2.3 Containerd instellen]]
-	- [[#3. Gemeenschappelijke configuratie#3.3 Kubernetes|3.3 Kubernetes]]
-		- [[#3.3 Kubernetes#3.3.1 Wat is kubernetes?|3.3.1 Wat is kubernetes?]]
-		- [[#3.3 Kubernetes#3.3.2 Installeren kubeadm, kubelet en kubectl|3.3.2 Installeren kubeadm, kubelet en kubectl]]
-		- [[#3.3 Kubernetes#3.3.2.1 Uitzetten SWAP|3.3.2.1 Uitzetten SWAP]]
-		- [[#3.3 Kubernetes#3.3.2.2 Installeren pakketten|3.3.2.2 Installeren pakketten]]
-- [[#4. Configuratie master node|4. Configuratie master node]]
-- [[#5. Configuratie worker nodes|5. Configuratie worker nodes]]
-- [[#6. Configuratie kubernetes cluster|6. Configuratie kubernetes cluster]]
-	- [[#6. Configuratie kubernetes cluster#6.1 MetalLB|6.1 MetalLB]]
-	- [[#6. Configuratie kubernetes cluster#6.2 Cert-manager|6.2 Cert-manager]]
-		- [[#6.2 Cert-manager#6.2.1 Installatie cert-manager|6.2.1 Installatie cert-manager]]
-		- [[#6.2 Cert-manager#6.2.2 Aanvragen certificaten|6.2.2 Aanvragen certificaten]]
-	- [[#6. Configuratie kubernetes cluster#6.3 Istio en GatewayAPI|6.3 Istio en GatewayAPI]]
-		- [[#6.3 Istio en GatewayAPI#6.3.1 Installatie Istio en GatewayAPI|6.3.1 Installatie Istio en GatewayAPI]]
-		- [[#6.3 Istio en GatewayAPI#6.3.2 Creatie gateway|6.3.2 Creatie gateway]]
-- [[#7. Setup website|7. Setup website]]
-	- [[#7. Setup website#7.1 Dockerfile|7.1 Dockerfile]]
-	- [[#7. Setup website#7.2 Github Actions|7.2 Github Actions]]
-		- [[#7.2 Github Actions#7.2.1 Inleiding|7.2.1 Inleiding]]
-		- [[#7.2 Github Actions#7.2.2 Github repository|7.2.2 Github repository]]
-		- [[#7.2 Github Actions#7.2.3.1 Workflow|7.2.3.1 Workflow]]
-		- [[#7.2 Github Actions#7.2.3.2 Build en push docker image|7.2.3.2 Build en push docker image]]
-		- [[#7.2 Github Actions#7.2.3.3 Deploy naar kubernetes|7.2.3.3 Deploy naar kubernetes]]
-		- [[#7.2 Github Actions#7.2.4 Service account|7.2.4 Service account]]
-		- [[#7.2 Github Actions#7.2.5 Portforwarding kube-apiserver|7.2.5 Portforwarding kube-apiserver]]
-		- [[#7.2 Github Actions#7.2.6 Updaten website|7.2.6 Updaten website]]
-- [[#8. Extra docker container|8. Extra docker container]]
-	- [[#8. Extra docker container#8.1 Installatie portainer|8.1 Installatie portainer]]
-- [[#Troubleshooting|Troubleshooting]]
-	- [[#Troubleshooting#1. SWAP|1. SWAP]]
-	- [[#Troubleshooting#2. Metallb|2. Metallb]]
-	- [[#Troubleshooting#3. Github actions|3. Github actions]]
-- [[#Sources|Sources]]
-- [[#Agenda|Agenda]]
-- [[#Besluit|Besluit]]
+- [#Inleiding|Inleiding]
+- [#Netwerkschema|Netwerkschema]
+- [#1. Router|1. Router]
+	- [#1. Router#1.1 Opzoeken handleiding|1.1 Opzoeken handleiding]
+	- [#1. Router#1.2 Instellen statisch IP|1.2 Instellen statisch IP]
+	- [#1. Router#1.3 Setup Wizard|1.3 Setup Wizard]
+		- [#1.3 Setup Wizard#1.3.1 WAN configuratie|1.3.1 WAN configuratie]
+		- [#1.3 Setup Wizard#1.3.2 LAN configuratie|1.3.2 LAN configuratie]
+		- [#1.3 Setup Wizard#1.3.3 Instellen DHCP windows|1.3.3 Instellen DHCP windows]
+	- [#1. Router#1.4 Instellen Wireguard VPN|1.4 Instellen Wireguard VPN]
+		- [#1.4 Instellen Wireguard VPN#1.4.1 Installeren Wireguard|1.4.1 Installeren Wireguard]
+		- [#1.4 Instellen Wireguard VPN#1.4.2 Aanmaken Wireguard keys|1.4.2 Aanmaken Wireguard keys]
+		- [#1.4 Instellen Wireguard VPN#1.4.3 Aanmaken Wireguard interface|1.4.3 Aanmaken Wireguard interface]
+		- [#1.4 Instellen Wireguard VPN#1.4.3 Instellen client|1.4.3 Instellen client]
+- [#2. ESXi|2. ESXi]
+	- [#2. ESXi#2.1 ESXi installeren|2.1 ESXi installeren]
+	- [#2. ESXi#2.2 ESXi instellingen|2.2 ESXi instellingen]
+	- [#2. ESXi#2.3 VMs aanmaken|2.3 VMs aanmaken]
+	- [#2. ESXi#2.4 VMs configureren|2.4 VMs configureren]
+- [#3. Gemeenschappelijke configuratie|3. Gemeenschappelijke configuratie]
+	- [#3. Gemeenschappelijke configuratie#3.1 Docker|3.1 Docker]
+		- [#3.1 Docker#3.1.1 Wat is docker?|3.1.1 Wat is docker?]
+		- [#3.1 Docker#3.1.2 Docker installeren|3.1.2 Docker installeren]
+	- [#3. Gemeenschappelijke configuratie#3.2 Containerd|3.2 Containerd]
+		- [#3.2 Containerd#3.2.1 Wat is containerd?|3.2.1 Wat is containerd?]
+		- [#3.2 Containerd#3.2.2 Waarom containerd over Docker als CRI|3.2.2 Waarom containerd over Docker als CRI]
+		- [#3.2 Containerd#3.2.3 Containerd instellen|3.2.3 Containerd instellen]
+	- [#3. Gemeenschappelijke configuratie#3.3 Kubernetes|3.3 Kubernetes]
+		- [#3.3 Kubernetes#3.3.1 Wat is kubernetes?|3.3.1 Wat is kubernetes?]
+		- [#3.3 Kubernetes#3.3.2 Installeren kubeadm, kubelet en kubectl|3.3.2 Installeren kubeadm, kubelet en kubectl]
+		- [#3.3 Kubernetes#3.3.2.1 Uitzetten SWAP|3.3.2.1 Uitzetten SWAP]
+		- [#3.3 Kubernetes#3.3.2.2 Installeren pakketten|3.3.2.2 Installeren pakketten]
+- [#4. Configuratie master node|4. Configuratie master node]
+- [#5. Configuratie worker nodes|5. Configuratie worker nodes]
+- [#6. Configuratie kubernetes cluster|6. Configuratie kubernetes cluster]
+	- [#6. Configuratie kubernetes cluster#6.1 MetalLB|6.1 MetalLB]
+	- [#6. Configuratie kubernetes cluster#6.2 Cert-manager|6.2 Cert-manager]
+		- [#6.2 Cert-manager#6.2.1 Installatie cert-manager|6.2.1 Installatie cert-manager]
+		- [#6.2 Cert-manager#6.2.2 Aanvragen certificaten|6.2.2 Aanvragen certificaten]
+	- [#6. Configuratie kubernetes cluster#6.3 Istio en GatewayAPI|6.3 Istio en GatewayAPI]
+		- [#6.3 Istio en GatewayAPI#6.3.1 Installatie Istio en GatewayAPI|6.3.1 Installatie Istio en GatewayAPI]
+		- [#6.3 Istio en GatewayAPI#6.3.2 Creatie gateway|6.3.2 Creatie gateway]
+- [#7. Setup website|7. Setup website]
+	- [#7. Setup website#7.1 Dockerfile|7.1 Dockerfile]
+	- [#7. Setup website#7.2 Github Actions|7.2 Github Actions]
+		- [#7.2 Github Actions#7.2.1 Inleiding|7.2.1 Inleiding]
+		- [#7.2 Github Actions#7.2.2 Github repository|7.2.2 Github repository]
+		- [#7.2 Github Actions#7.2.3.1 Workflow|7.2.3.1 Workflow]
+		- [#7.2 Github Actions#7.2.3.2 Build en push docker image|7.2.3.2 Build en push docker image]
+		- [#7.2 Github Actions#7.2.3.3 Deploy naar kubernetes|7.2.3.3 Deploy naar kubernetes]
+		- [#7.2 Github Actions#7.2.4 Service account|7.2.4 Service account]
+		- [#7.2 Github Actions#7.2.5 Portforwarding kube-apiserver|7.2.5 Portforwarding kube-apiserver]
+		- [#7.2 Github Actions#7.2.6 Updaten website|7.2.6 Updaten website]
+- [#8. Extra docker container|8. Extra docker container]
+	- [#8. Extra docker container#8.1 Installatie portainer|8.1 Installatie portainer]
+- [#Troubleshooting|Troubleshooting]
+	- [#Troubleshooting#1. SWAP|1. SWAP]
+	- [#Troubleshooting#2. Metallb|2. Metallb]
+	- [#Troubleshooting#3. Github actions|3. Github actions]
+- [#Sources|Sources]
+- [#Agenda|Agenda]
+- [#Besluit|Besluit]
 
 
 <div class="page-break" style="page-break-before: always;"></div>
@@ -103,26 +103,26 @@ https://dl.ubnt.com/guides/edgemax/EdgeRouter_ER-X_QSG.pdf
 ### 1.2 Instellen statisch IP
 We starten met de router te resetten door de reset knop 10 seconden lang ingedrukt te houden tot de `eth4` LED begint te knipperen. We verbinden dan onze ethernet kabel met de `eth0/PoE In` poort op de router. Volgens de handleiding bevind de router zich standaard in het `192.168.1.x` subnet. We zullen dus onze computer een statisch IP-adres instellen in dit subnet.
 
-![[1 - Router - Static IP Windows.png]]
-![1 - Router - Static IP Windows.png](/images/1 - Router - Static IP Windows.png)
+![1 - Router - Static IP Windows.png]
+![1 - Router - Static IP Windows.png](images/1 - Router - Static IP Windows.png)
 <div class="page-break" style="page-break-before: always;"></div>
 
 ### 1.3 Setup Wizard
 #### 1.3.1 WAN configuratie
 We stellen hier het statisch IP-adres in dat we gekregen hebben aan het begin van de module. In dit geval is dit: `192.168.25.168/24`
 
-![[2 - Router - WAN Config.png]]
+![2 - Router - WAN Config.png](images/2 - Router - WAN Config.png)
 
 #### 1.3.2 LAN configuratie
 Vervolgens stellen we het subnet in dat we gekregen hebben in de opgave: `192.168.10.0/24` , we zetten de DHCP server ook aan.
 
-![[3 - Router - LAN Config.png]]
+![3 - Router - LAN Config.png](images/3 - Router - LAN Config.png)
 <div class="page-break" style="page-break-before: always;"></div>
 
 #### 1.3.3 Instellen DHCP windows
 Als we klaar zijn met de setup wizard moeten we onze computer terug zetten op DHCP.
 
-![[4 - Router - DHCP Windows.png]]
+![4 - Router - DHCP Windows.png]
 
 ### 1.4 Instellen Wireguard VPN
 Omdat ik persoonlijk liever met mijn VM's zou verbinden via SSH dan via het controle paneel van ESXI, heb ik een Wireguard VPN opgezet op de router, zodat ik controle kan hebben aan mijn hele netwerk. Dit is ook handig om vanop een afstand aan de router te kunnen, aangezien dit anders niet mogelijk zou zijn.
@@ -132,7 +132,7 @@ Omdat ik persoonlijk liever met mijn VM's zou verbinden via SSH dan via het cont
 #### 1.4.1 Installeren Wireguard
 Eerst openen we de terminal op onze router:
 
-![[router-cli.png]]
+![router-cli.png]
 
 Eenmaal als we met onze router verbonden zijn voeren de het volgende uit:
 ```shell
@@ -141,7 +141,7 @@ sudo dpkg -i wireguard-v2.0-e50-0.0.20191219-2.deb
 ```
 Het pakket dat we hier downloaden en installeren is afhankelijk van model, je kan hier een lijst vinden met uitleg: [Releases · Lochnair/vyatta-wireguard](https://github.com/Lochnair/vyatta-wireguard/releases). Het is ook afhankelijk van de versie van firmware die je draait, deze kan je terugvinden in de GUI: 
 
-![[Router-firmware-version.png]]
+![Router-firmware-version.png]
 
 #### 1.4.2 Aanmaken Wireguard keys
 We starten door een paar keys aan te maken voor de router:
@@ -260,23 +260,23 @@ De ESXi installatie is vrij standaard:
 
 We starten met ons systeem een statisch ip adres te geven. 
 
-![[ESXI 1 - Static IP Hypervisor.png]]
+![ESXI 1 - Static IP Hypervisor.png]
 
 Als tweede stellen we een hostname, de dns servers en onze ipv4 gateway in. We stellen ook een domeinnaam en een zoek domein in, voornamelijk omdat deze opties verplicht zijn.
 
-![[ESXI 2 - Aanpassen TCPIP Stack.png]]
+![ESXI 2 - Aanpassen TCPIP Stack.png]
 
 Als derde stellen we in dat de NTP client automatisch moet opstarten. Dit zodat we automatisch de correcte tijd hebben op ons systeem.
 
-![[ESXI 3 - NTP Server instellen.png]]
+![ESXI 3 - NTP Server instellen.png]
 
 Als laatste uploaden we de ISO die we gaan gebruiken om onze VMs aan te maken.
 
-![[ESXI 4 - Upload Ubuntu Server ISO.png]]
+![ESXI 4 - Upload Ubuntu Server ISO.png]
 
 We voegen ook onze eerste port forwarding regel toe zodat we externe toegang hebben aan ons ESXi controle paneel.
 
-![[Router - Portforwarding ESXI.png]]
+![Router - Portforwarding ESXI.png]
 
 <div class="page-break" style="page-break-before: always;"></div>
 
@@ -284,15 +284,15 @@ We voegen ook onze eerste port forwarding regel toe zodat we externe toegang heb
 
 We geven onze VM een naam en we stellen de OS opties in.
 
-![[ESXI 1 - Template Name.png]]
+![ESXI 1 - Template Name.png]
 
 Dan selecteren we de correcte opslag.
 
-![[ESXI 2 - datastore.png]]
+![ESXI 2 - datastore.png]
 
 Vervolgens geven we de hardware van onze VM in. We selecteren ook onze ISO hier.
 
-![[ESXI 3 - hardware.png]]
+![ESXI 3 - hardware.png]
 
 <div class="page-break" style="page-break-before: always;"></div>
 
@@ -300,19 +300,19 @@ Vervolgens geven we de hardware van onze VM in. We selecteren ook onze ISO hier.
 
 Zo ziet onze IP configuratie er uit. Alles is hetzelfde voor alle 4 VMs dat we aanmaken buiten het `Address: 192.168.10.20` veld in de IP Configuratie.
 
-![[Ubuntu Setup 1 - IPv4 Config.png]]
+![Ubuntu Setup 1 - IPv4 Config.png]
 
 We breiden onze standaard partitie uit van `14.996G` naar `29.996G`. Voor de rest passen we hier niets aan.
 
-![[Ubuntu Setup 2 - Disk Partitioning.png]]
+![Ubuntu Setup 2 - Disk Partitioning.png]
 
 Hier geven we onze gebruikers info en hostname in.
 
-![[Ubuntu Setup 3 - User Creation.png]]
+![Ubuntu Setup 3 - User Creation.png]
 
 Aangezien ik persoonlijk liever SSH gebruik dan het ESXi controle paneel voeg ik hier ook mijn SSH keys toe vanaf github.
 
-![[Ubuntu Setup 4 - SSH Install.png]]
+![Ubuntu Setup 4 - SSH Install.png]
 
 <div class="page-break" style="page-break-before: always;"></div>
 
@@ -329,7 +329,7 @@ Docker is een open-source platform voor het ontwikkelen, verzenden en draaien va
 - Een *image* is een gestandaardiseerd pakket dat alle bestanden, libraries en configuratie bevat. Het is een soort sjabloon met instructies voor het maken van *containers*.
 - Een *registry* is waar je deze images kan bewaren en delen. Er zijn publieke en privé registries.
 
-![[Docker-overview.png]]
+![Docker-overview.png]
 
 <div class="page-break" style="page-break-before: always;"></div>
 
@@ -337,7 +337,7 @@ Docker als een applicatie maakt gebruik van de Docker client (`docker`) en de Do
 - De docker client (`docker`) is de hoofd manier waarop je docker zou gebruiken. Dit biedt de commando's aan die je gebruikt, e.g. `docker run`, `docker build`, `docker ps`, `docker logs`, etc.
 - De docker daemon (`dockerd`) is backend waar dat de docker client je commando's naar toe stuurt. Dit is het deel van docker dat alles uitvoert en beheerd, e.g. images, containers, netwerken, en volumes.
 
-![[Docker-architecture.png]]
+![Docker-architecture.png]
 
 Docker is een zeer krachtige tool voor programmeurs en wordt voornamelijk gebruikt in continuous integration and continuous delivery (CI/CD) pipelines. Dit heeft als doel om het testen en implementeren van code sneller en automatisch te maken.
 
@@ -404,8 +404,8 @@ Containerd is eigenlijk de onderliggende laag onder de docker daemon(`dockerd`).
 
 Een container runtime maakt de container en zorgt dat het blijft draaien, het beheerd ook de hoeveelheid resources een container gebruikt. Het is een tussenstap tussen de host OS en de container engine, e.g. Docker of Kubernetes.
 
-![[Docker-stack2.png]]
-%%![[docker-stack.png]]%%
+![Docker-stack2.png]
+%%![docker-stack.png]%%
 
 > Sources:
 > [containerd vs. Docker | Docker](https://www.docker.com/blog/containerd-vs-docker/)
@@ -495,7 +495,7 @@ rm /tmp/config.toml
 
 Iedere *Kubernetes cluster* bevat minstens 1 `control plane` en 1 `worker node`.  Dit klinkt allemaal heel ingewikkeld maar we gebruiken `kubeadm` voor onze cluster op te zetten, wat dit hele process veel simpeler maakt.
 
-![[cluster-architecture.png]]
+![cluster-architecture.png]
 
 Zoals eerder vernoemd zijn er ook een paar *kubernetes* objecten, de belangrijkste voor ons zijn:
 - `Pods`
@@ -633,7 +633,7 @@ ipvs:
 
 Ik gebruik hier ook een dns naam voor de instelling `controlPlaneEndpoint`. Dit zorgt ervoor dat je ook meerdere control planes zou kunnen hebben. Dit zou dan naar een load-balancer moeten wijzen maar in mijn geval wijst deze dns naam enkel naar mijn control plane. Dit heb ik ingesteld in de router.
 
-![[router-dnsentry.png]]
+![router-dnsentry.png]
 
 We zetten dan de `control plane` op met het volgende commando:
 ```shell
@@ -836,7 +836,7 @@ kubectl apply -f cert-manager/
 ### 6.3 Istio en GatewayAPI
 
 #### 6.3.1 Installatie Istio en GatewayAPI
-![[simple-gateway.png]]
+![simple-gateway.png]
 Voor onze applicatie extern bereikbaar te maken via een domeinnaam moeten we 1 van de volgende 2 opties gebruiken:
 - `Ingress`
 - `GatewayAPI`
@@ -921,7 +921,7 @@ De gateway maakt ook automatisch een `Service` aan van type `LoadBalancer`. Het 
 
 Dit is ook waar we onze tweede port forwarding regel aanmaken:
 
-![[Port Forwarding 443.png]]
+![Port Forwarding 443.png]
 We forwarden dus het HTTPS verkeer naar het ip dat we hebben gekregen van de `LoadBalancer`.
 
 >Sources:
@@ -977,7 +977,7 @@ Het grootste probleem dat we momenteel zouden hebben is dat je manueel de image 
 #### 7.2.2 Github repository
 
 Hiervoor moeten we eerst een github repository aanmaken:
-![[create-repo.png]]
+![create-repo.png]
 
 Dan voeren we de volgende stappen uit om deze toe te voegen op ons systeem.
 ```shell
@@ -1287,12 +1287,12 @@ type: kubernetes.io/service-account-token
 ```
 
 Deze voegen we toe aan onze github repository:
-![[repo-secret.png]]
+![repo-secret.png]
 
 #### 7.2.5 Portforwarding kube-apiserver
 De laatste stap is om ervoor te zorgen dat *Github actions* kan communiceren met onze kubernetes cluster. Hiervoor moeten we onze `kube-apiserver` port forwarden. De poort waar dat de `kube-apiserver` standaard op draait is: **6443**.
 
-![[port forwarding k8s api.png]]
+![port forwarding k8s api.png]
 
 >[!tip] Tailscale
 >Ik ben te weten gekomen dat `Tailscale` een *kubernetes operator* en een *github actions* tool hebben die zouden toestaan om veilig de api-server te kunnen gebruiken in je workflow.
