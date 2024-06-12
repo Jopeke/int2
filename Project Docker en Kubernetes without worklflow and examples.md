@@ -104,6 +104,7 @@ https://dl.ubnt.com/guides/edgemax/EdgeRouter_ER-X_QSG.pdf
 We starten met de router te resetten door de reset knop 10 seconden lang ingedrukt te houden tot de `eth4` LED begint te knipperen. We verbinden dan onze ethernet kabel met de `eth0/PoE In` poort op de router. Volgens de handleiding bevind de router zich standaard in het `192.168.1.x` subnet. We zullen dus onze computer een statisch IP-adres instellen in dit subnet.
 
 ![[1 - Router - Static IP Windows.png]]
+![1 - Router - Static IP Windows.png](/images/1 - Router - Static IP Windows.png)
 <div class="page-break" style="page-break-before: always;"></div>
 
 ### 1.3 Setup Wizard
